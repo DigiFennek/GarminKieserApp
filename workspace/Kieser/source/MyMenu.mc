@@ -9,7 +9,6 @@ class MyMenu extends WatchUi.CustomMenu {
 
    	function initialize(title) {
        	_title = title;
-//       	CustomMenu.initialize(32, Graphics.COLOR_WHITE, {:focusItemHeight=>44, :titleItemHeight=>$.titleHeight, :footerItemHeight=>$.titleHeight});
        	CustomMenu.initialize(80, Graphics.COLOR_WHITE, {});
    	}   	
    	
@@ -79,7 +78,7 @@ class MyMenuItem extends WatchUi.CustomMenuItem {
     }
 
  	function setSubLabel(subLabel as Lang.String or Lang.Symbol or Null) as Void {
-		if (subLabel) {
+		if (subLabel != null) {
 			if (subLabel instanceof Lang.String) {
 		  		_subLabel = subLabel;
 			} else {

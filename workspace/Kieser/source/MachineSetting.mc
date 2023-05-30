@@ -6,7 +6,7 @@ class MachineSetting {
 	private var _min;
 	private var _max;
 	private var _value;
-	private var _stringIds;
+	private var _stringIds as Array;
 	
     function initialize(nameId, min, max, stringIds) {
       	_nameId = nameId;

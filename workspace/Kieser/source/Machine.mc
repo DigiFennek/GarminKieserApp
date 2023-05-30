@@ -3,7 +3,7 @@ import Toybox.Application.Storage;
 
 class Machine {
 	private var _name;
-	private var _settings;
+	private var _settings as Array;
 	private var _storage;
 	
     function initialize(machineList as Array, name as String) {

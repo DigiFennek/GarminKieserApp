@@ -4,7 +4,7 @@ import Toybox.Application.Storage;
 class Program {
 
 	private var _index;
-	private var _exercises;
+	private var _exercises as Array;
 	private var _storage;
 	private var _currentExercise;
 	    
