@@ -1,3 +1,4 @@
+import Toybox.Lang;
 import Toybox.Graphics;
 import Toybox.System;
 import Toybox.WatchUi; 
@@ -23,7 +24,10 @@ class MachineListMenuDelegate extends MyMenuDelegate {
        	MyMenuDelegate.initialize();
    	}
 
-    public function onSelect(item as MyMenuItem) as Void {
+    public function onSelectMachine(machine as Machine) as Void {
+   	}
+
+    public function onSelect(item) as Void {
 		onSelectMachine(item.getId());
    	}
 
@@ -41,7 +45,7 @@ class MachinePrefixMenuDelegate extends MyMenuDelegate {
     	_menuDelegate = menuDelegate;	
    	}
 
-    public function onSelect(item as MyMenuItem) as Void {
+    public function onSelect(item) as Void {
     	var filter = item.getId();
 		var title = WatchUi.loadResource($.Rez.Strings.machines) + " " + filter;
    		var menu = new MyMenu(title);

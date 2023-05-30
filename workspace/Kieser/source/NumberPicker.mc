@@ -1,3 +1,4 @@
+import Toybox.Lang;
 import Toybox.Graphics;
 import Toybox.WatchUi;
 
@@ -28,13 +29,11 @@ class DigitDrawable extends WatchUi.Drawable {
 
 	private var _index;
 	private var _selected;
-	private var _size;
 	
     public function initialize(index, selected, size) {
         Drawable.initialize({});
         _index = index;
         _selected = selected;
-        _size = size;
     }
 
     public function draw(dc as Dc) as Void {
@@ -135,6 +134,9 @@ class NumberPickerDelegate extends WatchUi.PickerDelegate {
         WatchUi.popView(WatchUi.SLIDE_RIGHT);
         return true;
     }
+
+	public function onSelect(value) as Void {		
+	}
 
     //! Handle a confirm event from the picker
     //! @param values The values chosen in the picker

@@ -1,3 +1,4 @@
+import Toybox.Lang;
 import Toybox.Graphics;
 import Toybox.System;
 import Toybox.WatchUi; 
@@ -13,7 +14,7 @@ class ProgramEditMachineMenuDelegate extends MyMenuDelegate {
        	_index = index;
    	}
 
-    public function onSelect(item as MyMenuItem) as Void {
+    public function onSelect(item) as Void {
     	var exercise = _program.getExercise(_index);
     	var machine = exercise.getMachine();
     	var title;

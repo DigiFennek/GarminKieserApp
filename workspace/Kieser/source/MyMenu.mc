@@ -1,3 +1,4 @@
+import Toybox.Lang;
 import Toybox.Graphics;
 import Toybox.System;
 import Toybox.WatchUi; 
@@ -34,8 +35,8 @@ class MyMenuDelegate extends WatchUi.Menu2InputDelegate {
 
 class MyMenuItem extends WatchUi.CustomMenuItem {
 
-    private var _label as String;
-    private var _subLabel as String;
+    private var _label as String = "";
+    private var _subLabel as String = "";
 
     public function initialize(label as Lang.String or Lang.Symbol, subLabel as Lang.String or Lang.Symbol or Null, identifier) {
         CustomMenuItem.initialize(identifier, {});
@@ -59,7 +60,7 @@ class MyMenuItem extends WatchUi.CustomMenuItem {
 
 		var text = _label;
 		
-		if (_subLabel) {
+		if (_subLabel.length()) {
 			text += ": " + _subLabel;
 		}
 

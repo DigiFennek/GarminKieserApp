@@ -1,3 +1,5 @@
+import Toybox.Lang;
+
 class ProgramList {
 
 	private var programList as Array;

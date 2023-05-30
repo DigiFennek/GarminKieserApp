@@ -1,3 +1,5 @@
+import Toybox.Lang;
+
 class MachineList {
 
 	private var machineList as Array;

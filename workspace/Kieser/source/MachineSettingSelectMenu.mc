@@ -1,3 +1,4 @@
+import Toybox.Lang;
 import Toybox.WatchUi;
 
 class MachineSettingSelectMenuDelegate extends MyMenuDelegate {
@@ -12,7 +13,7 @@ class MachineSettingSelectMenuDelegate extends MyMenuDelegate {
     }
 
 	function onSelect(item) {
-		var value as Number = item.getId();
+		var value = item.getId();
 		_machineSetting.setValue(value);
 		refreshMenuSubLabel(_parentMenu, _machineSetting, _machineSetting.getText());
 		WatchUi.popView(WatchUi.SLIDE_RIGHT);

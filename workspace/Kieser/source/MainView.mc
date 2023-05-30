@@ -1,3 +1,4 @@
+import Toybox.Lang;
 import Toybox.Graphics;
 import Toybox.WatchUi;
 import Toybox.Timer;
@@ -36,7 +37,7 @@ class ProgramItem extends WatchUi.Drawable {
 	private var _text;
 	private var _selected;
 
-    public function initialize(text as String, x as Number, y as Numer, selected as Boolean) {
+    public function initialize(text as String, x as Number, y as Number, selected as Boolean) {
         Drawable.initialize({});
         _x = x;
         _y = y;

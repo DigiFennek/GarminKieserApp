@@ -1,3 +1,5 @@
+import Toybox.Lang;
+
 class MachineSetting {
 
 	private var _nameId;

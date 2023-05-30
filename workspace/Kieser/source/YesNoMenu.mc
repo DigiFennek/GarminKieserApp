@@ -1,3 +1,4 @@
+import Toybox.Lang;
 import Toybox.Graphics;
 import Toybox.System;
 import Toybox.WatchUi; 
@@ -8,7 +9,13 @@ class YesNoMenuDelegate extends MyMenuDelegate {
        	MyMenuDelegate.initialize();
    	}
 
-    public function onSelect(item as MyMenuItem) as Void {
+	public function onNo() as Void {		
+	}
+
+	public function onYes() as Void {		
+	}
+
+    public function onSelect(item) as Void {
     	switch (item.getId()) {
     		case :menu_item_no:
 	    		WatchUi.popView(WatchUi.SLIDE_RIGHT);

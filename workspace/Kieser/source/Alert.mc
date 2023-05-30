@@ -1,6 +1,7 @@
-using Toybox.Graphics;
-using Toybox.WatchUi;
-using Toybox.Timer;
+import Toybox.Lang;
+import Toybox.Graphics;
+import Toybox.WatchUi;
+import Toybox.Timer;
 
 class AlertDelegate extends WatchUi.InputDelegate
 {

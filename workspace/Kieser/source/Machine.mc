@@ -1,3 +1,4 @@
+import Toybox.Lang;
 import Toybox.Application.Storage;
 
 class Machine {
@@ -42,7 +43,7 @@ class Machine {
 	}
 
 	function saveSettings() {
-		var storage as String = "";
+		var storage = "";
 		for (var i = 0; i < _settings.size(); i += 1) {
 			storage += _settings[i].getValue().format("%d");
 			storage += ';';

@@ -1,3 +1,4 @@
+import Toybox.Lang;
 import Toybox.Application.Storage;
 
 class Program {
@@ -56,7 +57,7 @@ class Program {
 	}
 
 	function saveExercises() {
-		var storage as String = "";
+		var storage = "";
 		for (var i = 0; i < _exercises.size(); i += 1) {
 			storage += _exercises[i].getMachine().getName();
 			storage += ';';

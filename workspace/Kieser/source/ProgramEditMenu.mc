@@ -1,3 +1,4 @@
+import Toybox.Lang;
 import Toybox.Graphics;
 import Toybox.System;
 import Toybox.WatchUi; 
@@ -26,7 +27,7 @@ class ProgramEditMenuDelegate extends MyMenuDelegate {
        	_program = program;
    	}
 
-    public function onSelect(item as MyMenuItem) as Void {
+    public function onSelect(item) as Void {
     	if (item.getId() == :menu_item_add_machine) {
 			var title = WatchUi.loadResource(Rez.Strings.add_machine);
     		$.MachineListMenu(title, new ProgramAddMachineListMenuDelegate(_program));
@@ -56,7 +57,7 @@ class ProgramAddMachineListMenuDelegate extends MachineListMenuDelegate {
 		WatchUi.popView(WatchUi.SLIDE_RIGHT);
 		WatchUi.popView(WatchUi.SLIDE_RIGHT);
 		WatchUi.popView(WatchUi.SLIDE_RIGHT);
-		ProgramEditMenu(_program, :menu_item_add_machine);
+		ProgramEditMenu(_program, :menu_item_add_machine.toNumber());
    	}
 }
 
