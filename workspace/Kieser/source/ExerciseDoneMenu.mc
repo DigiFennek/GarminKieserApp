@@ -5,24 +5,20 @@ import Toybox.WatchUi;
 class ExerciseDoneMenuDelegate extends MyMenuDelegate {
 
 	var _program;
-	var _endOfProgram;
 
     function initialize(program as Program) {
         MyMenuDelegate.initialize();
         _program = program;
- 		_endOfProgram = false;
     }
 
 	function onSelect(item) {
     	switch (item.getId()) {
     	case :item_next_exercise:
-	    	if (_program.nextExercise()) {
-   				WatchUi.popView(WatchUi.SLIDE_RIGHT);
-	   			WatchUi.popView(WatchUi.SLIDE_RIGHT);
-	   		} else {
+			WatchUi.popView(WatchUi.SLIDE_RIGHT);
+			WatchUi.popView(WatchUi.SLIDE_RIGHT);
+	    	if (_program.nextExercise() == false) {
        	 		Alert(WatchUi.loadResource(Rez.Strings.end_of_program));
        	 		_program.goTofirstExercise();
-       	 		_endOfProgram = true;
 	   		}
 	    	break;
     	case :item_exercise_settings:
@@ -32,13 +28,7 @@ class ExerciseDoneMenuDelegate extends MyMenuDelegate {
     }
 
 	function onBack() {
-		if (_endOfProgram) {
-			WatchUi.popView(WatchUi.SLIDE_RIGHT);
-			WatchUi.popView(WatchUi.SLIDE_RIGHT);
-			WatchUi.popView(WatchUi.SLIDE_RIGHT);
-		} else {
-			WatchUi.popView(WatchUi.SLIDE_RIGHT);
-		}
+		WatchUi.popView(WatchUi.SLIDE_RIGHT);
     }
 }
 

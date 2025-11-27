@@ -38,6 +38,7 @@ class MachineSettingListMenuDelegate extends MyMenuDelegate {
 
     public function onBack() as Void {
 		WatchUi.popView(WatchUi.SLIDE_RIGHT);
+		WatchUi.popView(WatchUi.SLIDE_RIGHT);
 	}    
 }
 

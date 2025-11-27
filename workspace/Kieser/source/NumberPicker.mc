@@ -4,25 +4,25 @@ import Toybox.WatchUi;
 
 class DigitFactory extends WatchUi.PickerFactory {
 
-  function initialize() {
-      PickerFactory.initialize();
-  }
+    function initialize() {
+        PickerFactory.initialize();
+    }
 
-  function getDrawable(index, selected) {
-	return new  DigitDrawable(index, selected, getSize());   
-  }
+    function getDrawable(index, selected) {
+        return new  DigitDrawable(index, selected, getSize());   
+    }
 
-  function getIndex(value) {
-	return value;
-  }
+    function getIndex(value) {
+        return value;
+    }
 
-  function getValue(index) {
-      return index;
-  }
+    function getValue(index) {
+        return index;
+    }
 
-  function getSize() {
-      return 10;
-  }
+    function getSize() {
+        return 10;
+    }
 }
 
 class DigitDrawable extends WatchUi.Drawable {

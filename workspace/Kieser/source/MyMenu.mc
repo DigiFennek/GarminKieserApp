@@ -37,7 +37,8 @@ class MyMenuItem extends WatchUi.CustomMenuItem {
     private var _label as String = "";
     private var _subLabel as String = "";
 
-    public function initialize(label as Lang.String or Lang.ResourceId, subLabel as Lang.String or Lang.ResourceId or Null, identifier) {
+    public function initialize(label as Lang.String or Lang.ResourceId, 
+								subLabel as Lang.String or Lang.ResourceId or Null, identifier as Object) {
         CustomMenuItem.initialize(identifier, {});
 
 		if (label instanceof Lang.String) {
