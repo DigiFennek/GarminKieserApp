@@ -22,7 +22,7 @@ class ExerciseDoneMenuDelegate extends MyMenuDelegate {
 	   		}
 	    	break;
     	case :item_exercise_settings:
-			$.MachineSettingListMenu(_program.getCurrentExercise().getMachine());
+			$.MachineSettingMenu(_program.getCurrentExercise().getMachine());
 	    	break;
     	}
     }

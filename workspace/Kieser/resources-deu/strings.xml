@@ -39,5 +39,5 @@
     <string id="big">gross</string>
     <string id="rotation">Rotation</string>
     <string id="head">Kopf</string>
-    <string id="new_program">Neues\nProgramm erstellen:\n-> Startmenü\n-> Programm wählen\n-> Menü lange\ndrücken</string>
+    <string id="new_program">Neues\nProgramm erstellen:\n• BACK drücken\n• Programm wählen\n• UP/MENÜ lange\ndrücken</string>
 </strings>

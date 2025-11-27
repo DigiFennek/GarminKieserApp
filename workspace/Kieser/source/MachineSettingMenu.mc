@@ -38,11 +38,10 @@ class MachineSettingListMenuDelegate extends MyMenuDelegate {
 
     public function onBack() as Void {
 		WatchUi.popView(WatchUi.SLIDE_RIGHT);
-		WatchUi.popView(WatchUi.SLIDE_RIGHT);
 	}    
 }
 
-function MachineSettingListMenu(machine) {
+function MachineSettingMenu(machine as Machine) {
     var menu = new MyMenu(machine.getName());		    
 
 	for( var i = 0; machine.getSetting(i) != null; i += 1 ) {

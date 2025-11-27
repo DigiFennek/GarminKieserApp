@@ -20,15 +20,15 @@ class ProgramEditMachineMenuDelegate extends MyMenuDelegate {
     	var title;
     	switch (item.getId()) {
     		case :menu_item_settings:
-	    		$.MachineSettingListMenu(machine);
+	    		MachineSettingMenu(machine);
     			break;
     		case :menu_item_delete_machine:
 				title = WatchUi.loadResource(Rez.Strings.remove) + "?";
-    			$.YesNoMenu(title, new ProgramEditMenuYesNoMenuDelegate(_program, _index));
+    			YesNoMenu(title, new ProgramEditMenuYesNoMenuDelegate(_program, _index));
     			break;
     		case :menu_item_insert_machine:
 				title = WatchUi.loadResource(Rez.Strings.insert);
- 		   		$.MachineListMenu(title, new ProgramEditMenuMachineListMenuDelegate(_program, _index));
+ 		   		MachineListMenu(title, new ProgramEditMenuMachineListMenuDelegate(_program, _index));
     			break;
     	}
    	}

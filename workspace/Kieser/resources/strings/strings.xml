@@ -39,5 +39,5 @@
     <string id="big">big</string>
     <string id="rotation">Rotation</string>
     <string id="head">Head</string>
-    <string id="new_program">Create a\nnew program:\n->Home Menu\n->select Program\n->long press MENU\nButton</string>
+    <string id="new_program">Create a\nnew program:\n• Press BACK\n• Select Program\n• Hold UP/MENU\nButton</string>
 </strings>
