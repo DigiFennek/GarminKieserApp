@@ -5,7 +5,7 @@ import Toybox.Timer;
 
 var _selected = 0;
 
-class MainView extends WatchUi.View {
+class MainView extends Toybox.WatchUi.View {
 
     public function initialize() {
         View.initialize();
@@ -21,7 +21,7 @@ class MainView extends WatchUi.View {
     	var dx = dc.getWidth() / 4; 
     	var dy = (dc.getHeight() - 2 * $.titleHeight) / 4; 
     	
-		new $.DrawableMenuTitle($.titleHeight, Rez.Strings.program).draw(dc);
+		new $.DrawableMenuTitle($.titleHeight, WatchUi.loadResource(Rez.Strings.program)).draw(dc);
     	new $.ProgramItem("1", x - dx, y - dy, _selected == 0).draw(dc);
     	new $.ProgramItem("2", x + dx, y - dy, _selected == 1).draw(dc);
     	new $.ProgramItem("3", x - dx, y + dy, _selected == 2).draw(dc);

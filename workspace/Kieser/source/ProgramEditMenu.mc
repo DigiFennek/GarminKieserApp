@@ -32,7 +32,7 @@ class ProgramEditMenuDelegate extends MyMenuDelegate {
 			var title = WatchUi.loadResource(Rez.Strings.add_machine);
     		$.MachineListMenu(title, new ProgramAddMachineListMenuDelegate(_program));
     	} else {
-    		var index = item.getId();
+    		var index = item.getId() as Number;
     		$.ProgramEditMachineMenu(_program, index);
     	}
    	}

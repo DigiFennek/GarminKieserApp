@@ -28,10 +28,13 @@ class MachineListMenuDelegate extends MyMenuDelegate {
    	}
 
     public function onSelect(item) as Void {
-		onSelectMachine(item.getId());
+		var machine = item.getId() as Machine;
+    	if (machine != null) {
+			onSelectMachine(machine);
+		}
    	}
 
-    public function onBack() as Void {
+    public function onBack() as Void {             
 		WatchUi.popView(WatchUi.SLIDE_RIGHT);
 	}    
 }	

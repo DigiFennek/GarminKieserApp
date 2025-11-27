@@ -37,7 +37,7 @@ class MyMenuItem extends WatchUi.CustomMenuItem {
     private var _label as String = "";
     private var _subLabel as String = "";
 
-    public function initialize(label as Lang.String or Lang.Symbol, subLabel as Lang.String or Lang.Symbol or Null, identifier) {
+    public function initialize(label as Lang.String or Lang.ResourceId, subLabel as Lang.String or Lang.ResourceId or Null, identifier) {
         CustomMenuItem.initialize(identifier, {});
 
 		if (label instanceof Lang.String) {
@@ -77,10 +77,10 @@ class MyMenuItem extends WatchUi.CustomMenuItem {
        	dc.drawText(textX, textY, font, text, Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
     }
 
- 	function setSubLabel(subLabel as Lang.String or Lang.Symbol or Null) as Void {
+	function setSubLabel(subLabel as Lang.String or Lang.ResourceId or Null) as Void {
 		if (subLabel != null) {
-			if (subLabel instanceof Lang.String) {
-		  		_subLabel = subLabel;
+			if (subLabel instanceof String) {
+				_subLabel = subLabel;
 			} else {
 				_subLabel = WatchUi.loadResource(subLabel);
 			}
@@ -101,7 +101,7 @@ class DrawableMenuTitle extends WatchUi.Drawable {
 		if (title instanceof Lang.String) {
 		  	_title = title;
 		} else {
-			_title = WatchUi.loadResource(title);
+			_title = title.toString();
 		}
     }
 

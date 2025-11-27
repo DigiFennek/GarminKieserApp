@@ -26,11 +26,13 @@ class MachineSettingListMenuDelegate extends MyMenuDelegate {
     }
     
 	function onSelect(item) {
-		var machineSetting = item.getId();
-		if (machineSetting.useNumberPicker()) {
-			MachineSettingPickerMenu(machineSetting, _parentMenu);
-		} else {
-			MachineSettingSelectMenu(machineSetting, _parentMenu);
+		var machineSetting = item.getId() as MachineSetting;
+    	if (machineSetting != null) {
+			if (machineSetting.useNumberPicker()) {
+				MachineSettingPickerMenu(machineSetting, _parentMenu);
+			} else {
+				MachineSettingSelectMenu(machineSetting, _parentMenu);
+			}
 		}
     }
 

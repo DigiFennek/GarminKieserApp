@@ -5,10 +5,10 @@ class ProgramList {
 	private var programList as Array;
 	
 	function initialize() { 
-    	programList = new[4];
+    	programList = new[0];
     	
-    	for (var i = 0; i < programList.size(); i += 1) {
-    		programList[i] = new Program(i);
+    	for (var i = 0; i < 4; i += 1) {
+    		programList.add(new Program(i));
     	}   	
 	}
 	

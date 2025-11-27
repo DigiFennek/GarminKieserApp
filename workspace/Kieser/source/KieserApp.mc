@@ -18,7 +18,7 @@ class KieserApp extends Application.AppBase {
     // onStart() is called on application start up
     function onStart(state as Dictionary?) as Void {
 		machineList = new MachineList();
-		programList = new ProgramList();
+		programList = new ProgramList(); 
     }
 
     // onStop() is called when your application is exiting
@@ -28,11 +28,10 @@ class KieserApp extends Application.AppBase {
     }
 
     // Return the initial view of your application here
-    function getInitialView() as Array<Views or InputDelegates>? {
-        return [ new $.MainView(), new $.MainViewDelegate() ] as Array<Views or InputDelegates>;
+    function getInitialView() as [Views] or [Views, InputDelegates] {
+        return [ new MainView(), new MainViewDelegate() ] ; 
     }
-
-}
+ }
 
 function getApp() as KieserApp {
     return Application.getApp() as KieserApp;

@@ -103,12 +103,6 @@ class ExercisePerformViewBehaviorDelegate extends WatchUi.BehaviorDelegate {
         ExerciseDoneMenu(_program);
         return true;
     }
-        
-    public function onBack() as Boolean {
-		var title = WatchUi.loadResource(Rez.Strings.cancel) + "?";
-		$.YesNoMenu(title, new ExercisePerformViewYesNoMenuDelegate());
-        return true;
-    }
 }
 
 class ExercisePerformViewYesNoMenuDelegate extends YesNoMenuDelegate {
